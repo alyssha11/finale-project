@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      /* Style the header */
+      .header {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Style the top navigation bar */
+      .topnav {
+        overflow: hidden;
+        background-color: rgb(39, 18, 231);
+      }
+
+      /* Style the topnav links */
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change color on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 5px 20px;
+        align-items: center;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+
+      .text {
+        font-family: "Arial";
+        margin: 10px;
+        text-align: left;
+        font-size: 30px;
+      }
+
+      #column1 {
+        align-items: left;
+        padding: 1px 20px;
+      }
+
+      #column2 {
+        background-color: rgb(39, 18, 231);
+        align-items: center;
+      }
+
+      .photo {
+        width: 450px;
+        height: 450px;
+        object-fit: contain;
+        margin-top: -50px;
+      }
+
+      .judul {
+        font-family: "helvetica";
+        text-align: center;
+      }
+
+      .isi {
+        font-family: "arial";
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        width: max-content;
+        font-size: 20px;
+        font-family: "arial";
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="page1.html" class="active">Home</a>
+      <a href="page2.html">About me</a>
+      <a href="page3.html">Winter club</a>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <h1 class="judul">Winter club</h1>
+        <p class="isi">
+          Beberapa waktu hari yang lalu aku nemuin acara winter club di
+          instragram,aku cukup tertarik buat ikutan kelas buliding website nya.
+          Tapi awalnya aku ragu-ragu mau ikutan karena sebelumnya aku belum
+          pernah ikut kegiatan seperti ini, selain itu pengetahuan aku tentang
+          website minim banget bahkan gak ada. Eh pas hari pertama aku ikutan
+          ternyata seru banget, kakak-kakak mentornya juga seru, asik dan ramah
+          banget, aku yang awalnya gak paham apa-apa tentang website jadi paham
+          banget. Para mentornya juga bebasin kita buat tanya kalau ada materi
+          yang belum ada yang paham. Kita juga gak full belajar kok, di
+          sela-sela pembelajaran kadang mentornya ajakin main gitu. seru banget
+          deh pokoknya!😄💗💖
+        </p>
+        <table>
+          <tr>
+            <th>Hari</th>
+            <th>materi</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Dasar-dasar HTML</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>dasar-dasar CSS, teks box, navigation bar</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Flex box dan java script</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Git dan bootstrap</td>
+          </tr>
+        </table>
+        <img src="WhatsApp Image 2021-12-23 at 20.33.28.jpeg" class="photo" />
+      </div>
+    </div>
+  </body>
+</html>
